@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Background-attachment demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="background-attachment.css" />
+        <script src="background-attachment.js" defer></script>
+    </head>
+    <body>
+        <h1>Background-attachment demo</h1>
+
+        <div class="filler-outer"></div>
+        <div class="box">
+            <div class="filler-inner"></div>
+            <div class="filler-inner"></div>
+            <div class="filler-inner"></div>
+            <div class="filler-inner"></div>
+            <div class="filler-inner"></div>
+        </div>
+        <div class="filler-outer"></div>
+        <div class="filler-outer"></div>
+        <div class="filler-outer"></div>
+        <div class="filler-outer"></div>
+
+        <div id="toggle">
+            <fieldset>
+                <legend>background-attachment</legend>
+
+                <label for="scroll">scroll</label>
+                <input id="scroll" type="radio" name="bgattachment" value="scroll" checked />
+                <label for="local">local</label>
+                <input id="local" type="radio" name="bgattachment" value="local" />
+                <label for="fixed">fixed</label>
+                <input id="fixed" type="radio" name="bgattachment" value="fixed" />
+            </fieldset>
+        </div>
+    </body>
+</html>

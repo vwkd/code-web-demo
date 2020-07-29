@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    /* already defaults to 100% */
+    /* width: 100vw; */
+    height: 100vh;
+    background-color: lightgrey;
+    overflow: auto;
+}
+
+.box {
+    height: 50vh;
+    overflow: auto;
+    border: 1px solid red;
+    background-color: white;
+    background-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/lizard.png);
+    background-attachment: scroll;
+}
+
+.filler-outer {
+    background-color: hsl(180, 40%, 80%);
+    height: 10vh;
+    margin: 5vh 2vh;
+    border: 1px dashed blue;
+}
+
+.filler-inner {
+    background-color: hsl(90, 50%, 50%, 0.3);
+    height: 10vh;
+    margin: 5vh 2vh;
+    border: 1px dashed green;
+}
+
+#toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: lightsalmon;
+    padding: 0.5em;
+    border: 1px solid red;
+    border-radius: 10px;
+}
