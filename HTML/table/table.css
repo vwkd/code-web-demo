@@ -1,31 +1,32 @@
 table {
-  width: 100%;
-  font-family: sans-serif;
-  border-collapse: collapse;
+    width: 100%;
+    font-family: sans-serif;
+    border-collapse: collapse;
 }
 
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 tr:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 div.wrapper {
-  /* enables scrolling within long table */
-  overflow-x: auto;
+    /* enables scrolling within long table */
+    overflow-x: auto;
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Table Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="table.css" />
+    </head>
+    <body>
+        <h2>Table default</h2>
+
+        <table>
+            <caption>
+                Monthly costs
+            </caption>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Banana</td>
+                    <td>$56.75</td>
+                </tr>
+                <tr>
+                    <td>Yogurt</td>
+                    <td>$12.99</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>$69.74</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2>Table cell spanning multiple columns / rows</h2>
+
+        <table>
+            <caption>
+                Monthly costs
+            </caption>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Price new</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Banana</td>
+                    <td>$56.75</td>
+                    <td>$57.00</td>
+                </tr>
+                <tr>
+                    <td>Yogurt</td>
+                    <td colspan="2">$12.99</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td rowspan="2">Total</td>
+                    <td>$69.74</td>
+                    <td>$69.99</td>
+                </tr>
+                <tr>
+                    <td>$0</td>
+                    <td>$0.25</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
