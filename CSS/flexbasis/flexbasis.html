@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex basis demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="flexbasis.css" />
+        <script src="flexbasis.js" defer></script>
+    </head>
+    <body>
+        <div id="toggle">
+            <h2>Toggle</h2>
+
+            <fieldset>
+                <legend>flex-basis</legend>
+                <label for="zero">0</label>
+                <input id="zero" type="radio" name="flexbasis" value="0" checked />
+                <label for="min-content">min-content</label>
+                <input id="min-content" type="radio" name="flexbasis" value="min-content" />
+                <label for="somewidth">15rem</label>
+                <input id="somewidth" type="radio" name="flexbasis" value="15rem" />
+            </fieldset>
+
+            <fieldset>
+                <legend>flex-grow</legend>
+                <label for="enable">enable</label>
+                <input id="enable" type="radio" name="flexgrow" value="1" />
+                <label for="disable">disable</label>
+                <input id="disable" type="radio" name="flexgrow" value="0" checked />
+            </fieldset>
+
+            <fieldset>
+                <legend>flex-shrink</legend>
+                <label for="enable">enable</label>
+                <input id="enable" type="radio" name="flexshrink" value="1" />
+                <label for="disable">disable</label>
+                <input id="disable" type="radio" name="flexshrink" value="0" checked />
+            </fieldset>
+        </div>
+
+        <h1>Flex basis demo</h1>
+
+        <section id="intro">
+            <h2>Intro</h2>
+
+            <p>This demo visually shows the contributions of <code>flex-grow</code> and <code>flex-shrink</code> to the size of a flex item for different initial sizes <code>flex-basis</code>.</p>
+
+            <p>The grey area is the initial size due to <code>flex-basis</code>. The green area is the additional size due to <code>flex-grow</code>. The blue area is the <code>min-content</code> size toward which <code>flex-shrink</code> reduces the size. Note that we can't visualise the for reference since we can't directly visualise the "subtracted size" due to <code>flex-shrink</code> unlike the additional size due to <code>flex-grow</code>.
+
+            <h4>Instructions:</h4>
+            <ol>
+                <li>Toggle different values for <code>flex-basis</code> with deactivated growing / shrinking. Note that <code>0</code> behaves the same as <code>min-content</code> due to the lower bound of the minimum size <code>min-content</code> (default).</li>
+                <li>
+                    Resize the browser window to make the boxes in their initial size fill the whole
+                    width.
+                </li>
+                <li>Enable growing and / or shrinking.</li>
+                <li>Resize the browser window to see the effect.</li>
+                <li>Observe how for growing the value <code>0</code> for <code>flex-basis</code> behaves different from <code>min-content</code>.</li>
+                <li>Observe how for shrinking it behaves like the value <code>0</code> for <code>flex-basis</code> for growing.</li>
+            </ol>
+
+            <p>Remember, <code>flex-shrink</code> has no effect if <code>flex-basis</code> is smaller than or equal to the minimum size <code>min-content</code> (default). In other words, it makes sense to enable it only for <code>flex-basis: 15rem</code>.</p>
+
+            <p>
+                Note: Check browser compatibility first for
+                <code>flex-grow: min-content</code> value on
+                <a
+                    href="https://caniuse.com/#feat=mdn-css_properties_flex-basis_min-content"
+                    target="_blank"
+                    >caniuse</a
+                >.
+            </p>
+
+        </section>
+
+        <section id="demo">
+            <h2>Demo</h2>
+
+            <div class="container">
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolor
+                        </div>
+                    </div>
+                </div>
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolorsitamet
+                        </div>
+                    </div>
+                </div>
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolor
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
