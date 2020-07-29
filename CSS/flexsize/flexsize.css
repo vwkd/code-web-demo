@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+#toggle {
+    float: right;
+    background-color: gainsboro;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle fieldset:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#demo {
+    clear: both;
+}
+
+/* --------------- DEMO --------------- */
+
+.container {
+    display: flex;
+    /* already default */
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+}
+
+.minsize {
+    background-color: lightsteelblue;
+    width: min-content;
+}
+
+.basis {
+    background-color: lightgrey;
+    max-width: 20rem;
+}
+
+.stretch {
+    background-color: darkseagreen;
+    border: 0.1rem solid red;
+    margin: 0.1rem;
+    flex-basis: 20rem;
+    /* default values */
+    flex-grow: 0;
+    flex-shrink: 0;
+}

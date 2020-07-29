@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex size demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="flexsize.css" />
+        <script src="flexsize.js" defer></script>
+    </head>
+    <body>
+        <div id="toggle">
+            <h2>Toggle</h2>
+
+            <fieldset>
+                <legend>flex-grow</legend>
+                <label for="enable">enable</label>
+                <input id="enable" type="radio" name="flexgrow" value="1" />
+                <label for="disable">disable</label>
+                <input id="disable" type="radio" name="flexgrow" value="0" checked />
+            </fieldset>
+
+            <fieldset>
+                <legend>flex-shrink</legend>
+                <label for="enable">enable</label>
+                <input id="enable" type="radio" name="flexshrink" value="1" />
+                <label for="disable">disable</label>
+                <input id="disable" type="radio" name="flexshrink" value="0" checked />
+            </fieldset>
+        </div>
+
+        <h1>Flex size demo</h1>
+
+        <section id="intro">
+            <h2>Intro</h2>
+
+            <p>
+                This demo visually shows the contributions of <code>flex-grow</code> and
+                <code>flex-shrink</code> to the size of a flex item.
+            </p>
+
+            <p>
+                The grey area is the initial size due to <code>flex-basis</code>. The green area is
+                the additional size due to <code>flex-grow</code>. The blue area is the
+                <code>min-content</code> size toward which <code>flex-shrink</code> reduces the
+                size. Note that we can't visualise the for reference since we can't directly
+                visualise the "subtracted size" due to <code>flex-shrink</code> unlike the
+                additional size due to <code>flex-grow</code>.
+            </p>
+
+            <p>
+                All three boxes have their initial main size set to
+                <code>flex-basis: 20rem</code> which is wider than their minimum size
+                <code>min-content</code> (default).
+            </p>
+
+            <h4>Instructions:</h4>
+            <ol>
+                <li>
+                    Resize the browser window to make the boxes in their initial size fill the whole
+                    width.
+                </li>
+                <li>Enable growing and / or shrinking.</li>
+                <li>Resize the browser window to see the effect.</li>
+            </ol>
+        </section>
+
+        <section id="demo">
+            <h2>Demo</h2>
+
+            <div class="container">
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolorsitamet
+                        </div>
+                    </div>
+                </div>
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolorsitamet
+                        </div>
+                    </div>
+                </div>
+                <div class="stretch">
+                    <div class="basis">
+                        <div class="minsize">
+                            Loremipsumdolorsitamet
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
