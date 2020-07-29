@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Position demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="position.css" />
+        <script src="position.js" defer></script>
+    </head>
+
+    <body>
+        <section id="toggle">
+            <h2>Toggle</h2>
+
+            <fieldset>
+                <legend>position</legend>
+
+                <label for="static"
+                    >static
+                    <input id="static" type="radio" name="position" value="static" checked />
+                </label>
+                <label for="relative"
+                    >relative
+                    <input id="relative" type="radio" name="position" value="relative" />
+                </label>
+                <label for="sticky"
+                    >sticky
+                    <input id="sticky" type="radio" name="position" value="sticky" />
+                </label>
+                <label for="absolute"
+                    >absolute
+                    <input id="absolute" type="radio" name="position" value="absolute" />
+                </label>
+                <label for="fixed"
+                    >fixed
+                    <input id="fixed" type="radio" name="position" value="fixed" />
+                </label>
+            </fieldset>
+        </section>
+
+        <h1>Position demo</h1>
+
+        <section id="intro">
+            <h2>Intro</h2>
+
+            <p>
+                This demo shows the different <code>position</code> values applied to the red box.
+                It's parent is colored blue and the parent siblings are colored grey.
+            </p>
+
+            <p>
+                The box has a offset of <code>top: 50px</code> which has different effects based on
+                the value of the <code>position</code> property. For clarity no horizontal offset is
+                applied. It would have analogous effects in the horizontal axis depending on
+                overflow.
+            </p>
+
+            <p>
+                In the static, relative and sticky case the parent is the containing block, since
+                it's the nearest ancestor box with ODT not inline. The parent has
+                <code>position: relative</code> to be the containing block for the absolute case. In
+                the fixed case the viewport is the (initial) containing block. Also in the sticky
+                case the box has the <code>&lt;html&gt;</code> element as nearest scrollport.
+            </p>
+        </section>
+
+        <section id="demo">
+            <h2>Demo</h2>
+
+            <div class="wrapper">
+                <div class="parent">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Curabitur faucibus urna id dolor maximus, vel laoreet felis commodo.</p>
+                    <p>Aliquam leo sem, efficitur eget molestie ac, pellentesque eget leo.</p>
+                    <p>Phasellus ut sem mattis eros cursus mattis a non ipsum.</p>
+                    <div class="child"></div>
+                    <p>Nunc eleifend non elit eget lobortis.</p>
+                    <p>Duis magna est, tristique nec neque ornare, sodales pharetra odio.</p>
+                    <p>
+                        Duis tristique, enim ut faucibus efficitur, magna dui consequat tortor, nec
+                        pharetra magna mauris nec purus.
+                    </p>
+                    <p>Phasellus pulvinar nec nulla ut dictum.</p>
+                    <p>Ut sollicitudin malesuada nunc, non luctus velit convallis nec.</p>
+                    <p>Etiam dapibus hendrerit ex eget lobortis.</p>
+                    <p>Donec dapibus nisi et massa malesuada, quis porttitor purus pulvinar.</p>
+                    <p>Maecenas sit amet bibendum felis, eu vehicula sapien.</p>
+                </div>
+
+                <div class="uncle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Curabitur faucibus urna id dolor maximus, vel laoreet felis commodo.</p>
+                    <p>Aliquam leo sem, efficitur eget molestie ac, pellentesque eget leo.</p>
+                    <p>Phasellus ut sem mattis eros cursus mattis a non ipsum.</p>
+                    <p>Nunc eleifend non elit eget lobortis.</p>
+                    <p>Duis magna est, tristique nec neque ornare, sodales pharetra odio.</p>
+                    <p>
+                        Duis tristique, enim ut faucibus efficitur, magna dui consequat tortor, nec
+                        pharetra magna mauris nec purus.
+                    </p>
+                    <p>Phasellus pulvinar nec nulla ut dictum.</p>
+                    <p>Ut sollicitudin malesuada nunc, non luctus velit convallis nec.</p>
+                    <p>Etiam dapibus hendrerit ex eget lobortis.</p>
+                    <p>Donec dapibus nisi et massa malesuada, quis porttitor purus pulvinar.</p>
+                    <p>Maecenas sit amet bibendum felis, eu vehicula sapien.</p>
+                </div>
+
+                <div class="uncle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Curabitur faucibus urna id dolor maximus, vel laoreet felis commodo.</p>
+                    <p>Aliquam leo sem, efficitur eget molestie ac, pellentesque eget leo.</p>
+                    <p>Phasellus ut sem mattis eros cursus mattis a non ipsum.</p>
+                    <p>Nunc eleifend non elit eget lobortis.</p>
+                    <p>Duis magna est, tristique nec neque ornare, sodales pharetra odio.</p>
+                    <p>
+                        Duis tristique, enim ut faucibus efficitur, magna dui consequat tortor, nec
+                        pharetra magna mauris nec purus.
+                    </p>
+                    <p>Phasellus pulvinar nec nulla ut dictum.</p>
+                    <p>Ut sollicitudin malesuada nunc, non luctus velit convallis nec.</p>
+                    <p>Etiam dapibus hendrerit ex eget lobortis.</p>
+                    <p>Donec dapibus nisi et massa malesuada, quis porttitor purus pulvinar.</p>
+                    <p>Maecenas sit amet bibendum felis, eu vehicula sapien.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

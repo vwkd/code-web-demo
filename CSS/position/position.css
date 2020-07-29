@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+#toggle {
+    float: right;
+    background-color: gainsboro;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle fieldset:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#toggle label {
+    display: block;
+}
+
+#demo {
+    clear: both;
+}
+
+/* --------------- DEMO --------------- */
+
+#demo .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#demo .parent {
+    background-color: lightblue;
+    /* to be containing block for absolutely positioned case otherwise would be viewport */
+    position: relative;
+}
+
+#demo .uncle {
+    background-color: #eee;
+}
+
+#demo .child {
+    height: 32px;
+    top: 50px;
+    /* needed for absolutely positioned case otherwise auto is static location */
+    left: 0;
+    /* needed for absolutely positioned case otherwise zero since empty */
+    width: 100%;
+    background-color: hsl(0, 100%, 50%, 0.5);
+    border: 2px dashed red;
+}
