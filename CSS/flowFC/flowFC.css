@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+#toggle {
+    float: right;
+    background-color: gainsboro;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle fieldset:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#demo {
+    clear: both;
+}
+
+code {
+    /* override highlight.js */
+    background: none !important;
+}
+
+/* --------------- DEMO --------------- */
+
+#demo span {
+    all: initial;
+}
+
+#demo .parent {
+    border: 1px solid blue;
+}
+
+#demo .child {
+    border: 1px solid red;
+}

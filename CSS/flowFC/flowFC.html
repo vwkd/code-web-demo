@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flow FC demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="flowFC.css" />
+        <script src="flowFC.js" defer></script>
+
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+        <section id="toggle">
+            <h2>Toggle</h2>
+
+            <fieldset>
+                <legend>parent ODT</legend>
+                <label for="pODT1">block</label>
+                <input id="pODT1" type="radio" name="pODT" value="block" checked />
+                <label for="pODT2">inline</label>
+                <input id="pODT2" type="radio" name="pODT" value="inline" />
+            </fieldset>
+
+            <fieldset>
+                <legend>parent FC</legend>
+                <label for="pFC1">flow</label>
+                <input id="pFC1" type="radio" name="pFC" value="flow" checked="true" />
+                <label for="pFC2">flow-root</label>
+                <input id="pFC2" type="radio" name="pFC" value="flow-root" checked="false" />
+            </fieldset>
+
+            <fieldset>
+                <legend>child ODT</legend>
+                <label for="cODT1">block</label>
+                <input id="cODT1" type="radio" name="cODT" value="block" checked />
+                <label for="cODT2">inline</label>
+                <input id="cODT2" type="radio" name="cODT" value="inline" />
+            </fieldset>
+        </section>
+
+        <h1>Flow formatting context demo</h1>
+
+        <section id="intro">
+            <h2>Intro</h2>
+
+            <p>
+                Given the following markup you can toggle the following properties.
+            </p>
+
+            <pre><code class="html">
+  &lt;span class=&quot;parent-sibling&quot;&gt;a&lt;/span&gt;
+  &lt;span class=&quot;parent&quot;&gt;
+      &lt;span&gt;ba&lt;/span&gt;
+      &lt;span class=&quot;child&quot;&gt;bb&lt;/span&gt;
+      &lt;span&gt;bc&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;parent-sibling&quot;&gt;c&lt;/span&gt;
+        </code></pre>
+
+            <p>
+                Parent siblings get parent ODT and IDT fixed to <code>flow</code>. Child siblings
+                default to <code>inline flow</code>.
+            </p>
+
+            <p>
+                Note: Check browser compatibility first for multi-valued display type on
+                <a
+                    href="https://caniuse.com/#feat=mdn-css_properties_display_multi-keyword_values"
+                    target="_blank"
+                    >caniuse</a
+                >
+                or
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/display-inside"
+                    target="_blank"
+                    >MDN</a
+                >.
+            </p>
+        </section>
+
+        <section id="demo">
+            <h2>Demo</h2>
+
+            <span class="parent-sibling">
+                a
+            </span>
+
+            <span class="parent">
+                <span>
+                    ba
+                </span>
+                <span class="child">
+                    bb
+                </span>
+                <span>
+                    bc
+                </span>
+            </span>
+
+            <span class="parent-sibling">
+                c
+            </span>
+        </section>
+    </body>
+</html>
