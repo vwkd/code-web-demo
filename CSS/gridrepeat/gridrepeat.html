@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Grid repeat demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="gridrepeat.css" />
+        <script src="gridrepeat.js" defer></script>
+    </head>
+    <body>
+        <div id="toggle">
+            <h2>Toggle</h2>
+
+            <fieldset>
+                <legend>repetitions</legend>
+                <label for="fixed">5</label>
+                <input id="fixed" type="radio" name="repetitions" value="5" checked/>
+                <label for="autofill">auto-fill</label>
+                <input id="autofill" type="radio" name="repetitions" value="auto-fill"/>
+                <label for="autofit">auto-fit</label>
+                <input id="autofit" type="radio" name="repetitions" value="auto-fit"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>track list fragment</legend>
+                <label for="fixed">200px</label>
+                <input id="fixed" type="radio" name="tracklistfragment" value="200px" checked/>
+                <label for="flexible">minmax(200px, 1fr)</label>
+                <input id="flexible" type="radio" name="tracklistfragment" value="minmax(200px, 1fr)"/>
+            </fieldset>
+        </div>
+
+        <h1>Grid repeat demo</h1>
+
+        <section id="intro">
+            <h2>Intro</h2>
+
+            <p>This demo shows the effect of using the <code>repeat(repetitions, track list fragment)</code> function as track list for the columns of a grid.</p>
+
+            <p>The <code>200px</code> track list fragment creates fixed 200px columns, the <code>minmax(200px, 1fr)</code> creates flexible 200px columns that grow if space is left over. Vary the viewport width to see the effect of the flexible columns.</p>
+
+            <p>There are three items that are auto placed in the first three columns, any further columns stay empty.</p>
+
+            <p>The fixed repetition creates exactly five 200px columns. The auto-fill repetition creates as many 200px columns as fit. The auto-fit repetition is similar to auto-fill, except it doesn't create empty columns.</p>
+            
+            <p>Note: The viewport width must be at least <code>800px + 3rem</code> wide to see the difference between auto-fit and auto-fill repetitions and at least <code>1000px + 4rem</code> wide to see the difference between fixed and flexible track sizes for a fixed amount of repetitions.</p>
+
+        </section>
+
+        <section id="demo">
+            <h2>Demo</h2>
+
+            <div class="container">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </section>
+    </body>
+</html>
